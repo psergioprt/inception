@@ -1,0 +1,12 @@
+https://github.com/pin3dev/42_Inception/wiki/Nginx
+
+mkdir -p rootInception/srcs/ && nano rootInception/srcs/docker-compose.yml
+
+web ---> chmod 777 .web --> index.html e depois o index.php   https://github.com/pin3dev/42_Inception/wiki/Integration-Nginx-%26-PHP-FPM
+
+
+mariadb --> https://medium.com/@ssterdev/inception-42-project-part-ii-19a06962cf3b 
+
+debian:trixie (stable)
+
+php 8.2:
