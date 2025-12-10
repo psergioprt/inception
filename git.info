@@ -1,0 +1,9 @@
+cd ~/inception
+git init
+git add .
+git commit -m "Initial setup for inception project"
+git branch -M main
+git remote add origin https://github.com/yourusername/inception.git
+git push -u origin main
+
+git clone https://github.com/yourusername/inception.git
