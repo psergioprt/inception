@@ -31,7 +31,7 @@ $(HOME)/env/.env
 
 Clone the repository and move into the project folder:
 
-```bash
+```
 git clone <repo-url> rootInception
 cd rootInception
 ```
@@ -66,7 +66,7 @@ Project structure:
 ## 3. Build and Run
 
 The project uses a Makefile to simplify execution (use either)
-```bash
+```
 make
 make all
 ```
@@ -80,21 +80,22 @@ This will:
 + Start all services using docker compose
 
 ## 4. Start services
-```bash
+```
 make up
 ```
 ## 5. Stop services
 
-Use either:
-```bash
+Stops containers:
+```
 make down
+```
+Stops containers, removes volumes and orphans containers
+(containers from old service definitions no longer present in docker compose).
+```
 make clean
 ```
-Stops containers and removes orphans containers
-(containers from old service definitions no longer present in docker compose).
-
 ## 6. Clean the environment
-```bash
+```
 make fclean
 ```
 This will:
@@ -104,7 +105,7 @@ This will:
 + Run Docker prune, commands to delete unused images, networks, stopped containers and build cache.
 
 ## 7. Rebuild everything
-```bash
+```
 make re
 ```
 Runs make fclean followed by make all.
