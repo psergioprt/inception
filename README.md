@@ -147,16 +147,16 @@ Besides the help from 42 peers regardingn how to begin the project, understand e
 + Environment variable configuration through a .env file
 
 ## Technical Choices
-> **Docker Compose v.3.8**
->> Simplifies orchestration and service management
->> Enables persistent volumes and isolated networks
-> NGINX + TLS
->> Mandatory HTTPS
->>> Secure reverse proxy
->>> Serves static + PHP traffic
-> PHP-FPM for WordPress
->> Efficient PHP processing
->> Clean separation between web server and application runtime
+> **Docker Compose v.3.8**  
+>> Simplifies orchestration and service management  
+>> Enables persistent volumes and isolated networks  
+> NGINX + TLS  
+>> Mandatory HTTPS  
+>>> Secure reverse proxy  
+>>> Serves static + PHP traffic  
+> PHP-FPM for WordPress  
+>> Efficient PHP processing  
+>> Clean separation between web server and application runtime  
 + MariaDB
 - Open-source relational database
 - Configured via init script and custom config(50-server.cnf)
