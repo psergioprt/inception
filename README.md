@@ -147,7 +147,7 @@ Besides the help from 42 peers regardingn how to begin the project, understand e
 + Environment variable configuration through a .env file
 
 ## Technical Choices
-- **Docker Compose v.3.8**
++ **Docker Compose v.3.8**
   ▣ Simplifies orchestration and service management
   ▣ Enables persistent volumes and isolated networks
 + NGINX + TLS
