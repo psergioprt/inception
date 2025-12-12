@@ -244,10 +244,11 @@ select * from wp-users;
 
 ### Docker Volumes vs Bind Mounts
 
-| Feature     | Volumes                    | Bind Mounts                |
-|-------------|----------------------------|----------------------------|
-| Location    | Managed by Docker          | Maps host folder directly  |
-| Persistence | Survives container removal | Depends on host            |
-| Portability | High                       | Tied to host path          |
+| Feature       | Volumes                    | Bind Mounts                     |
+|---------------|----------------------------|---------------------------------|
+| Location      | Managed by Docker          | Maps host folder directly       |
+| Persistence   | Survives container removal | Survives container removal      |
+| Portability   | High                       | Tied to host path               |
+| Accessibility | Inside Docker only         | Directly accessible on the host |
 
-**Choice:** Docker volumes were used for persistence and portability.
+**Choice:** Bind mounts were used for MariaDB and WordPress data to ensure persistence, easy host access, and direct inspection or backup of files.
