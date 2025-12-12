@@ -57,20 +57,22 @@ Project structure:
             └── install_wordpress.sh
 ```
 **Important Notes**
-+ Throughout this README, wheneber you see https://login.42.fr, in my project should be replaced with https://pauldos-.42.fr. This is the domain configured for my Inception setup.
++ Throughout this README, whenever you see https://login.42.fr, in my project should be replaced with https://pauldos-.42.fr. This is the domain configured for my Inception setup.
 + Default folders for persistent data (MariaDB and Wordpress) are located under /HOME/pauldos-/ but they may appear as $(HOME)/. Both refer to the same user home directory. 
 
 ## 3. Build and Run
 
-The project uses a Makefile to simplify execution
+The project uses a Makefile to simplify execution (use either)
 ```bash
 make
 make all
 ```
 This will:
 + create MariaDB and Wordpress data folders:
+```
   $(HOME)/data/mariadb/*
   $(HOME)/data/wordpress/*
+```
 + Buill all Docker images
 + Start all services using docker compose
 
@@ -79,6 +81,8 @@ This will:
 make up
 ```
 ## 5. Stop services
+
+Use either:
 ```bash
 make down
 make clean
@@ -112,7 +116,7 @@ https://login.42.fr
 
 # Resources
 
-Besides the help from 42 peers regardingn how to begin the project, understand expected behaviours, Docker contruction and overcoming difficulties, I used the following
+Besides the help from 42 peers regarding how to begin the project, understand expected behaviours, Docker contruction and overcoming difficulties, I used the following
  resources to better understand Inception project contents:
 
 ## Official Documentation
@@ -145,27 +149,27 @@ Besides the help from 42 peers regardingn how to begin the project, understand e
 + Environment variable configuration through a .env file
 
 ## Technical Choices
-+ Docker Compose v.3.8
-- Simplifies orchestration and service management
-- Enables persistent volumes and isolated networks
-+ NGINX + TLS
-- Mandatory HTTPS
-- Secure reverse proxy
-- Serves static + PHP traffic
-+ PHP-FPM for WordPress
-- Efficient PHP processing
-- Clean separation between web server and application runtime
-+ MariaDB
-- Open-source relational database
-- Configured via init script and custom config(50-server.cnf)
-+ Volumes under $(HOME)/data/
-- Ensume data persistence
-- Keeps state between container rebuilds
-+ Makefile automation
-- make / make up - start the infrastructure
-- make down / make clean - stop and clean orphans
-- make fclean - full cleanup, including images/volumes and .env
-- make re - rebuild everything
++ **Docker Compose v.3.8**  
+	+ Simplifies orchestration and service management  
+	+ Enables persistent volumes and isolated networks  
++ **NGINX + TLS**  
+	+ Mandatory HTTPS  
+	+ Secure reverse proxy  
+	+ Serves static + PHP traffic  
++ **PHP-FPM for WordPress**  
+	+ Efficient PHP processing  
+	+ Clean separation between web server and application runtime  
++ **MariaDB**  
+	+ Open-source relational database  
+	+ Configured via init script and custom config(50-server.cnf)  
++ **Volumes under $(HOME)/data/**  
+	+ Ensume data persistence  
+	+ Keeps state between container rebuilds  
++ **Makefile automation**  
+	+ make / make up - start the infrastructure  
+	+ make down / make clean - stop and clean orphans  
+	+ make fclean - full cleanup, including images/volumes and .env  
+	+ make re - rebuild everything  
 
 ## Usage Examples
 + Start the full infrastructure
