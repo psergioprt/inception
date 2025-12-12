@@ -69,8 +69,10 @@ make all
 ```
 This will:
 + create MariaDB and Wordpress data folders:
+```
   $(HOME)/data/mariadb/*
   $(HOME)/data/wordpress/*
+```
 + Buill all Docker images
 + Start all services using docker compose
 
