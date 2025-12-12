@@ -34,27 +34,30 @@ Clone the repository and move into the project folder:
 ```bash
 git clone <repo-url> rootInception
 cd rootInception
-
+```
 Project structure: 
-
+```
+├── DEV_DOC.md
 ├── Makefile
-└── srcs
-    ├── docker-compose.yml
-    └── requirements
-        ├── mariadb
-        │   ├── conf
-        │   │   └── 50-server.cnf
-        │   ├── Dockerfile
-        │   └── mariadb-run.sh
-        ├── nginx
-        │   ├── conf
-        │   │   └── nginx.conf
-        │   └── Dockerfile
-        └── wordpress
-            ├── conf
-            │   └── www.conf
-            ├── Dockerfile
-            └── install_wordpress.sh
+├── README.md
+├── srcs
+│   ├── docker-compose.yml
+│   └── requirements
+│       ├── mariadb
+│       │   ├── conf
+│       │   │   └── 50-server.cnf
+│       │   ├── Dockerfile
+│       │   └── mariadb-run.sh
+│       ├── nginx
+│       │   ├── conf
+│       │   │   └── nginx.conf
+│       │   └── Dockerfile
+│       └── wordpress
+│           ├── conf
+│           │   └── www.conf
+│           ├── Dockerfile
+│           └── install_wordpress.sh
+└── USER_DOC.md
 ```
 **Important Notes**
 + Throughout this README, whenever you see https://login.42.fr, in my project should be replaced with https://pauldos-.42.fr. This is the domain configured for my Inception setup.
@@ -73,7 +76,7 @@ This will:
   $(HOME)/data/mariadb/*
   $(HOME)/data/wordpress/*
 ```
-+ Buill all Docker images
++ Build all Docker images
 + Start all services using docker compose
 
 ## 4. Start services
@@ -106,7 +109,7 @@ make re
 ```
 Runs make fclean followed by make all.
 
-## 8. Acess the website
+## 8. Access the website
 
 The website only accepts **HTTPS** connections.
 Open:
@@ -138,7 +141,7 @@ Besides the help from 42 peers regarding how to begin the project, understand ex
 + Helping structure and improve the newly required Markedown sections of the project's implementation.
 
 ## Features
-+ Fully containerized multi-service instrastructure
++ Fully containerized multi-service infrastructure
 + Custom Dockerfiles for each service (no prebuilt images allowed)
 + NGINX configured with TLS/SSL
 + Wordpress running with PHP-FPM
@@ -163,7 +166,7 @@ Besides the help from 42 peers regarding how to begin the project, understand ex
 	+ Open-source relational database  
 	+ Configured via init script and custom config(50-server.cnf)  
 + **Volumes under $(HOME)/data/**  
-	+ Ensume data persistence  
+	+ Ensure data persistence  
 	+ Keeps state between container rebuilds  
 + **Makefile automation**  
 	+ make / make up - start the infrastructure  
