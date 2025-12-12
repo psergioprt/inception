@@ -148,7 +148,7 @@ Besides the help from 42 peers regardingn how to begin the project, understand e
 
 ## Technical Choices
 + Docker Compose v.3.8
-- Simplifies orchestration and service management
+-     Simplifies orchestration and service management
 - Enables persistent volumes and isolated networks
 + NGINX + TLS
 - Mandatory HTTPS
