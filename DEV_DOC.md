@@ -1,38 +1,33 @@
 # 1. Environment Setup From Scratch
-Prerequisites
 
-Install the following on the host machine:
+## Prerequisites
+
+### Install the following on the host machine:
 
 Docker
 
 Docker Compose
 
 A .env file located at:
-
+```
 $(HOME)/env/.env
-
+```
 Required .env variables
 
-MariaDB
+**MariaDB**
 
 DB_NAME
-
 DB_USER
-
 DB_PASSWORD
-
 DB_ROOT_PASSWORD
 
-WordPress
+**WordPress**
 
 WP_ADMIN_USER
-
 WP_ADMIN_PASSWORD
-
 WP_ADMIN_EMAIL
 
-Domain
-
+**Domain**
 DOMAIN_NAME=pauldos-.42.fr
 
 # 2. Building and Launching the Project
@@ -45,21 +40,21 @@ Build and start everything:
 ```
 make
 ```
-
 Or explicitly:
 ```
 make all
+```
+This will:
+	Build all service images from the included Dockerfiles
+	Create persistent data folders
+	Start the full Docker Compose stack
+
+```
 make up
 ```
-
 This will:
-
-Build all service images from the included Dockerfiles
-
-Create persistent data folders
-
-Start the full Docker Compose stack
-
+	Build all service images from the included Dockerfiles
+	
 # 3. Useful Commands for Developers
 View running containers:
 ```
@@ -136,16 +131,9 @@ Each service is built from scratch, using its own Dockerfile, config files, and 
 
 # 6. Development Notes and Design Decisions
 
-No prebuilt images (mandatory requirement)
-
-A private Docker network isolates services internally
-
-NGINX enforces HTTPS using self-signed certificates
-
-WordPress is executed through PHP-FPM for performance
-
-MariaDB is initialized using custom scripts
-
-The Makefile automates the full workflow: setup, rebuild, cleanup
-
-END OF DEV_DOC.md
++ No prebuilt images (mandatory requirement)
++ A private Docker network isolates services internally
++ NGINX enforces HTTPS using self-signed certificates
++ WordPress is executed through PHP-FPM for performance
++ MariaDB is initialized using custom scripts
++ The Makefile automates the full workflow: setup, rebuild, cleanup

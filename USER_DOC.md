@@ -89,5 +89,3 @@ SHOW DATABASES;
 
 
 If all containers appear as “Up” in docker compose ps, the stack is functioning correctly.
-
-END OF USER_DOC.md
