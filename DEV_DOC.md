@@ -16,18 +16,19 @@ Required .env variables
 
 **MariaDB**
 
-DB_NAME
-DB_USER
-DB_PASSWORD
+DB_NAME  
+DB_USER  
+DB_PASSWORD  
 DB_ROOT_PASSWORD
 
 **WordPress**
 
-WP_ADMIN_USER
-WP_ADMIN_PASSWORD
+WP_ADMIN_USER  
+WP_ADMIN_PASSWORD  
 WP_ADMIN_EMAIL
 
 **Domain**
+
 DOMAIN_NAME=pauldos-.42.fr
 
 # 2. Building and Launching the Project
@@ -44,16 +45,16 @@ Or explicitly:
 ```
 make all
 ```
-This will:
-	Build all service images from the included Dockerfiles
-	Create persistent data folders
-	Start the full Docker Compose stack
+This will:  
+	+ Build all service images from the included Dockerfiles
+	+ Create persistent data folders
+	+ Start the full Docker Compose stack
 
 ```
 make up
 ```
-This will:
-	Build all service images from the included Dockerfiles
+This will:  
+	+ Build all service images from the included Dockerfiles
 	
 # 3. Useful Commands for Developers
 View running containers:
@@ -74,11 +75,11 @@ Stop containers:
 ```
 make down
 ```
-Stop and clean orphan containers:
+Stop and clean orphan containers and removes volumes at the Docker:
 ```
 make clean
 ```
-Full cleanup (containers, images, volumes, .env):
+Full cleanup (containers, images, volumes, mariadb and wordpress host data folders, .env):
 ```
 make fclean
 ```
@@ -99,7 +100,7 @@ mariadb/ stores all database tables
 
 wordpress/ stores uploads, plugins, themes, and persistent WordPress content
 
-Volumes are not removed unless running:
+Previously saved info is not removed unless running:
 ```
 make fclean
 ```
