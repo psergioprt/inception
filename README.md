@@ -210,7 +210,11 @@ use dbsite
 select * from wp-users;
 ```
 
+# Project Description
+This project uses Docker to provide lightweight, reproducible, and isolated environments for each service, avoiding the overhead of virtual machines and simplifying deployment and management.
+
 ## Concept Comparisons
+
 ### Virtual Machines vs Docker
 
 | Feature       | Virtual Machines        | Docker                         |
