@@ -1,0 +1,24 @@
+add .md files to the repo root folder
+change make down and make clean
+
+was:
+
+# Stop containers
+down:
+        docker compose -f srcs/docker-compose.yml down -v --remove-orphans
+
+will be:
+
+down:
+        docker compose -f srcs/docker-compose.yml down
+
+was:
+
+clean:
+        $(MAKE) down
+
+will be:
+
+clean:
+        docker compose -f srcs/docker-compose.yml down -v --remove-orphans
+
