@@ -5,6 +5,9 @@ su -
 adduser <yourlogin>
 usermod -aG sudo <yourlogin>
 
+check if user is at sudoers group
+getent group sudo
+
 # Configure Guest Additions
 Configure Guest Additions
 This is necessary for copying text from the physical machine to the virtual machine
